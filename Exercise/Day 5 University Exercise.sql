@@ -155,6 +155,18 @@ VALUES
 ('ADM', 'Administration', 'Dr. Patel', 'Room 001', 'admin@univ.edu'),
 ('LIB', 'Library Services', 'Clara Dean', 'Room 102', 'library@univ.edu');
 
+-- Select Queries
+SELECT * from Departments
+SELECT DeptName, HeadOfDept, OfficeLocation FROM Departments;
+SELECT * from Departments where DeptName = 'Mathematics'; 
+SELECT * FROM Departments WHERE HeadOfDept = 'Susan Taylor';
+SELECT * FROM Departments WHERE OfficeLocation = 'Room 403';
+SELECT * FROM Departments ORDER BY OfficeLocation DESC;
+SELECT * FROM Departments WHERE DeptName ='Library Services' AND DeptName = 'Psychology';
+SELECT * FROM Departments WHERE Email = 'library@univ.edu';
+SELECT * FROM Departments WHERE HeadOfDept = 'Lisa Brown';
+SELECT * FROM Departments WHERE OfficeLocation = 'Room 102' OR OfficeLocation = 'Room 109';
+
 -- Create Table 5 Enrollments
 CREATE TABLE Enrollments (
     EnrollmentID VARCHAR(10) PRIMARY KEY,
@@ -178,6 +190,18 @@ VALUES
 ('E1008', 1008, 'CS205', 'Spring', 2025, 'A'),
 ('E1009', 1009, 'EDU101', 'Fall', 2025, 'B'),
 ('E1010', 1010, 'BUS210', 'Summer', 2025, 'A-');
+
+-- Select Queries
+SELECT * from Enrollments
+SELECT CourseID, Semester, Year, Grade FROM Enrollments;
+SELECT * from Enrollments where Grade = 'A'; 
+SELECT * FROM Enrollments WHERE Semester = 'Spring';
+SELECT * FROM Enrollments WHERE CourseID = 'BUS210';
+SELECT * FROM Enrollments ORDER BY Grade DESC;
+SELECT * FROM Enrollments WHERE StudentID = 1006 AND StudentID = 1010;
+SELECT * FROM Enrollments WHERE EnrollmentID = 'E1007';
+SELECT * FROM Enrollments WHERE Year = 2025;
+SELECT * FROM Enrollments WHERE Semester = 'Spring' OR Semester = 'Fall';
 
 -- Create Table 6 Classrooms
 CREATE TABLE Classrooms (
